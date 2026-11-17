@@ -1234,6 +1234,33 @@
       overflow: hidden;
     }
 
+    .offer-card::before,
+    .offer-card::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      opacity: .5;
+      animation: offerGlow 3s ease-in-out infinite;
+    }
+
+    .offer-card::before {
+      width: 150px;
+      height: 150px;
+      top: -78px;
+      left: -58px;
+      background: rgba(255, 210, 92, .24);
+    }
+
+    .offer-card::after {
+      width: 110px;
+      height: 110px;
+      right: -42px;
+      bottom: -46px;
+      background: rgba(122, 215, 255, .2);
+      animation-delay: 1.2s;
+    }
+
     .offer-sticker {
       position: absolute;
       top: 16px;
@@ -1257,6 +1284,20 @@
       font-size: 14px;
     }
 
+    .offer-sticker-alt {
+      top: 66px;
+      right: auto;
+      left: 14px;
+      width: 58px;
+      height: 58px;
+      background: #FF6B6B;
+      font-size: 9px;
+      letter-spacing: .4px;
+      transform: rotate(-12deg);
+      animation: offerStickerFloat 2.8s ease-in-out infinite;
+      z-index: 2;
+    }
+
     .offer-kicker {
       margin-bottom: 8px;
       color: #C8C1FF;
@@ -1268,7 +1309,7 @@
 
     .offer-title {
       max-width: 220px;
-      margin: 0 auto 8px;
+      margin: 0 0 8px 70px;
       color: var(--white);
       font-size: 27px;
       line-height: 1.25;
@@ -1322,6 +1363,26 @@
     @keyframes offerStickerPulse {
       0%, 100% { transform: rotate(9deg) scale(1); }
       50% { transform: rotate(9deg) scale(1.06); }
+    }
+
+    @keyframes offerStickerFloat {
+      0%, 100% { transform: rotate(-12deg) translateY(0); }
+      50% { transform: rotate(-7deg) translateY(-7px); }
+    }
+
+    @keyframes offerGlow {
+      0%, 100% { transform: scale(.95); opacity: .35; }
+      50% { transform: scale(1.08); opacity: .7; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .offer-card,
+      .offer-sticker,
+      .offer-sticker-alt,
+      .offer-card::before,
+      .offer-card::after {
+        animation: none;
+      }
     }
 
     @keyframes offerCardIn {
@@ -2247,12 +2308,26 @@
 
       .offer-section .offer-card {
         width: 100%;
-        padding: 26px 16px 22px;
+        padding: 34px 16px 22px;
         border-radius: 22px;
+      }
+
+      .offer-section .offer-sticker-alt {
+        top: 68px;
+        left: 8px;
+        width: 48px;
+        height: 48px;
+        font-size: 7px;
+        transform: rotate(-8deg);
+      }
+
+      .offer-section .offer-sticker-alt span {
+        font-size: 10px;
       }
 
       .offer-section .offer-title {
         font-size: 24px;
+        margin-left: 60px;
       }
 
       .offer-section .offer-copy {
@@ -3394,6 +3469,7 @@
     <section class="offer-section">
       <div class="offer-card">
         <div class="offer-sticker">LIMITED<br><span>STOCK</span></div>
+        <div class="offer-sticker offer-sticker-alt">HURRY<br><span>UP!</span></div>
         <p class="offer-kicker">Special offer</p>
         <h2 class="offer-title">आज का Limited Price</h2>
         <p class="offer-copy">Neuro Mantra Syrup के लिए सीमित समय और सीमित stock Available है।</p>
@@ -3704,13 +3780,14 @@
 
         var remaining = 2 * 60;
         function updateTimer() {
+          if (remaining <= 0) remaining = 2 * 60;
           var h = Math.floor(remaining / 3600);
           var m = Math.floor((remaining % 3600) / 60);
           var s = remaining % 60;
           hours.textContent = String(h).padStart(2, '0');
           minutes.textContent = String(m).padStart(2, '0');
           seconds.textContent = String(s).padStart(2, '0');
-          if (remaining > 0) remaining -= 1;
+          remaining -= 1;
         }
         updateTimer();
         setInterval(updateTimer, 1000);
