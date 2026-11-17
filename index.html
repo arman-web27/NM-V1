@@ -132,7 +132,7 @@
     }
 
     h2.section-title {
-      font-size: 30px;
+      font-size: 26px;
       line-height: 1.3;
       font-weight: 700;
       color: var(--cream);
@@ -192,12 +192,12 @@
 
     /* Premium Main Header */
     .main-speech-title {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 600;
       color: var(--ink);
       text-align: center;
       line-height: 1.4;
-      margin-bottom: 48px;
+      margin-bottom: 32px;
     }
 
     .main-speech-title span {
@@ -391,7 +391,7 @@
     }
 
     .ayur-main-title {
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 700;
       color: var(--ink);
       line-height: 1.15;
@@ -410,9 +410,9 @@
 
     /* BIG BOTTLE IMAGE - Enhanced Frame */
     .ayur-image-frame {
-      flex: 0 0 250px;
-      width: 250px;
-      height: 250px;
+      flex: 0 0 340px;
+      width: 340px;
+      height: 340px;
       background: linear-gradient(145deg, #f5f1ff 0%, #e6e0ff 100%);
       border-radius: 28px;
       padding: 0;
@@ -520,13 +520,83 @@
       color: var(--gold);
     }
 
+    @media (max-width: 600px) {
+      .solution-section {
+        padding: 0;
+      }
+
+      .ayur-section-box {
+        padding: 16px 0 0;
+      }
+
+      .ayur-main-title {
+        font-size: 26px;
+        line-height: 1.15;
+        padding: 0;
+      }
+
+      .ayur-description {
+        font-size: 19px;
+        line-height: 1.5;
+      }
+
+      .ayur-badge {
+        font-size: 15px;
+        padding: 6px 14px;
+      }
+
+      .ayur-presentation {
+        gap: 22px;
+      }
+
+      .ayur-image-frame {
+        flex: 0 0 auto;
+        width: min(340px, calc(100vw - 32px));
+        height: min(340px, calc(100vw - 32px));
+        border-radius: 28px;
+        box-shadow: 0 14px 28px rgba(37, 35, 74, 0.16);
+      }
+
+      .ayur-image-frame img {
+        transform: none;
+      }
+
+      .ayur-text-block {
+        max-width: none;
+        padding: 0;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .ayur-description {
+        font-size: 17px;
+        line-height: 1.45;
+      }
+
+      .ayur-features-wrapper {
+        gap: 8px;
+        max-width: none;
+        margin-bottom: 22px;
+        padding: 0;
+      }
+
+      .ayur-badge {
+        font-size: 13px;
+        padding: 6px 11px;
+        border-radius: var(--radius-md);
+        box-shadow: 0 2px 4px rgba(37, 35, 74, 0.04);
+      }
+    }
+
     @media (max-width: 400px) {
       .ayur-section-box {
         padding: 16px 0 0;
       }
 
       .ayur-main-title {
-        font-size: 28px;
+        font-size: 26px;
       }
 
       .ayur-presentation {
@@ -538,8 +608,8 @@
 
       .ayur-image-frame {
         flex: 0 0 auto;
-        width: min(220px, 100%);
-        height: min(220px, calc(100vw - 70px));
+        width: min(340px, calc(100vw - 32px));
+        height: min(340px, calc(100vw - 32px));
         aspect-ratio: 1 / 1;
         border-radius: 28px;
       }
@@ -554,7 +624,7 @@
 
       .ayur-badge {
         font-size: 12.5px;
-        padding: 5px 12px;
+        padding: 6px 10px;
       }
     }
 
@@ -575,7 +645,7 @@
     .journey-track {
       position: relative;
       width: 100%;
-      aspect-ratio: 450/1120;
+      aspect-ratio: 450/980;
       margin-top: -16px;
     }
 
@@ -874,7 +944,7 @@
     .why-section {
       background: var(--cream);
       border-bottom: 2px solid var(--gold);
-      padding-top: 0;
+      padding-top: 18px;
       padding-bottom: 0;
       padding-left: 0;
       padding-right: 0;
@@ -909,7 +979,7 @@
     .section-title-h2 {
       color: var(--gold);
       text-align: center;
-      font-size: 30px;
+      font-size: 26px;
     }
 
     .wc-wheel-wrap {
@@ -1312,7 +1382,7 @@
 
     .order-intro-card h2 {
       color: var(--ink);
-      font-size: 29px;
+      font-size: 26px;
       line-height: 1.25;
     }
 
@@ -1342,7 +1412,7 @@
     .bacare2-title {
       display: none;
       text-align: center;
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 800;
       color: var(--gold);
       margin: 0 0 16px;
@@ -1497,7 +1567,7 @@
     @media (max-width:460px) {
       .bacare2-wrap {
         width: 100%;
-        padding: 14px;
+        padding: 0px;
         border-radius: 18px;
       }
 
@@ -1615,7 +1685,7 @@
 
     .rj-heading {
       color: var(--ink);
-      font-size: 30px;
+      font-size: 26px;
       font-weight: 600;
       line-height: 1.2;
       margin: 0 0 8px;
@@ -1699,7 +1769,7 @@
 
     .rj-quote {
       color: var(--ink);
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.75;
       margin: 0 0 16px;
       padding-right: 20px;
@@ -1794,7 +1864,7 @@
     }
 
     .rj-quote {
-      font-size: 15px;
+      font-size: 16px;
       line-height: 1.55;
       padding-right: 0;
       text-align: center;
@@ -1814,7 +1884,7 @@
       }
 
       .rj-heading {
-        font-size: 19px;
+        font-size: 26px;
       }
 
       .rj-rail {
@@ -1839,7 +1909,7 @@
       }
 
       .rj-quote {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
 
@@ -2101,7 +2171,97 @@
       }
 
       h2.section-title {
+        font-size: 26px;
+        line-height: 1.25;
+      }
+
+      .ingredients-section h2.section-title {
+        font-size: 26px;
+        line-height: 1.3;
+      }
+
+      .ingredients-section .ing-row {
+        grid-template-columns: 50% 50%;
+        height: 190px;
+        margin-bottom: 16px;
+        border-radius: 20px;
+      }
+
+      .ingredients-section .ing-card,
+      .ingredients-section .ing-row.left .ing-card,
+      .ingredients-section .ing-row.right .ing-card {
+        padding: 20px 18px;
+        margin: 0;
+      }
+
+      .ingredients-section .ing-card h3.sub {
+        font-size: 21px;
+        line-height: 1.25;
+        margin-bottom: 6px;
+      }
+
+      .ingredients-section .ing-card p {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      .why-section {
+        padding: 18px 0 0;
+      }
+
+      .why-section .section-title-h2 {
+        padding: 0 16px;
+        margin-bottom: 12px;
+        font-size: 26px;
+        line-height: 1.3;
+      }
+
+      .why-section .why-cert-image {
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-bottom: 0;
+        border-radius: 0;
+        box-shadow: 0 8px 20px rgba(37, 35, 74, 0.14);
+      }
+
+      .ba-section .doctor-image {
+        width: 100vw;
+        max-width: none;
+        margin-left: calc(50% - 50vw);
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: 0 8px 20px rgba(10, 12, 28, 0.2);
+      }
+
+      .ba-section {
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      .offer-section {
+        margin: 0;
+        padding: 22px 14px 26px;
+      }
+
+      .offer-section .offer-card {
+        width: 100%;
+        padding: 26px 16px 22px;
+        border-radius: 22px;
+      }
+
+      .offer-section .offer-title {
         font-size: 24px;
+      }
+
+      .offer-section .offer-copy {
+        margin-bottom: 16px;
+      }
+
+      .offer-section .offer-timer {
+        gap: 6px;
+        margin-bottom: 16px;
       }
 
       .section-title-h2 {
@@ -2109,6 +2269,43 @@
       }
 
       h3.sub {
+        font-size: 17px;
+      }
+
+      .benefits-section .section-title {
+        margin-bottom: 6px;
+      }
+
+      .benefits-section .journey-track {
+        margin-top: -16px;
+        aspect-ratio: 450 / 980;
+      }
+
+      .benefits-section .journey-marker[style*="top:12%"],
+      .benefits-section .journey-card[style*="top:12%"] {
+        top: 12% !important;
+      }
+
+      .journey-marker {
+        width: 138px;
+        height: 138px;
+        border-width: 5px;
+      }
+
+      .journey-card {
+        width: 62%;
+        padding: 16px 18px;
+        border-radius: 22px;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .journey-card .jc-title {
+        font-size: 20px;
+        margin-bottom: 2px;
+      }
+
+      .journey-card .jc-text {
         font-size: 17px;
       }
 
@@ -2152,8 +2349,9 @@
       }
 
       .main-speech-title {
-        font-size: 19px;
-        margin-bottom: 36px;
+        font-size: 26px;
+        line-height: 1.3;
+        margin-bottom: 24px;
       }
 
       .problem-section {
@@ -2167,15 +2365,20 @@
 
       .editorial-block,
       .editorial-block:nth-child(even) {
-        width: 100%;
-        min-height: 164px;
-        padding: 16px 20px;
+        width: 88%;
+        min-height: 156px;
+        padding: 16px 22px 16px 16px;
+      }
+
+      .editorial-block:nth-child(even) {
+        padding-left: 22px;
+        padding-right: 16px;
       }
 
       .arch-frame {
-        width: 120px;
-        height: 120px;
-        flex-basis: 120px;
+        width: 124px;
+        height: 124px;
+        flex-basis: 124px;
         margin: 0;
       }
 
@@ -2204,16 +2407,16 @@
       }
 
       .ayur-main-title {
-        font-size: 22px;
+        font-size: 26px;
       }
 
       .ayur-description {
-        font-size: 13.5px;
+        font-size: 17px;
       }
 
       .ayur-badge {
-        font-size: 12px;
-        padding: 5px 11px;
+        font-size: 15px;
+        padding: 6px 14px;
       }
 
       .journey-marker {
@@ -2234,7 +2437,7 @@
       }
 
       .journey-card .jc-text {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.45;
       }
 
@@ -2458,7 +2661,7 @@
     }
 
     .faq-a-text {
-      font-size: 14px;
+      font-size: 16px;
       color: rgba(243, 241, 255, 0.78);
       line-height: 1.6;
     }
@@ -2789,7 +2992,7 @@
 
         <!-- Main Header -->
         <h2 class="main-speech-title">
-          बच्चे की इन परेशानियों को देखकर हर Parent की चिंता बढ़ जाती है
+          बच्चे की इन परेशानियों को देखकर क्या आपकी भी चिंता बढ़ जाती है?
         </h2>
 
         <!-- 2-Column Grid Layout Container -->
@@ -2879,7 +3082,7 @@
 
         <!-- Header Section -->
         <div class="ayur-header">
-          <h2 class="ayur-main-title">पेश है - Neuro Mantra Syrup</h2>
+          <h2 class="ayur-main-title">पेश है Neuro Mantra Syrup</h2>
         </div>
 
         <!-- Presentation Split Row (Image & Text Content) -->
@@ -2887,21 +3090,21 @@
 
           <!-- Framed Canvas for Product Bottle -->
           <div class="ayur-image-frame">
-            <img src="images/product.avif" alt="Neuro Mantra Bottle">
+            <img src="images/product.avif" alt="Neuro Mantra Syrup की बोतल">
           </div>
 
           <!-- Content Copy Block -->
           <div class="ayur-text-block">
-            <p class="ayur-description updated-description">बच्चों की बेहतर देखभाल और Development Journey को ध्यान में रखकर तैयार किया गया Ayurvedic Herbal Formula</p>
+            <p class="ayur-description updated-description">बच्चों की बेहतर देखभाल और संपूर्ण विकास को ध्यान में रखकर तैयार किया गया आयुर्वेदिक हर्बल फ़ॉर्मूला।</p>
           </div>
 
         </div>
 
         <!-- Feature Cloud Badges -->
         <div class="ayur-features-wrapper">
-          <span class="ayur-badge"><i class="fa-solid fa-brain" aria-hidden="true"></i> Brain Health</span>
-          <span class="ayur-badge"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i> Muscle Care</span>
-          <span class="ayur-badge"><i class="fa-solid fa-person-walking" aria-hidden="true"></i> Overall Development</span>
+          <span class="ayur-badge"><i class="fa-solid fa-brain" aria-hidden="true"></i> मस्तिष्क स्वास्थ्य</span>
+          <span class="ayur-badge"><i class="fa-solid fa-dumbbell" aria-hidden="true"></i> मांसपेशियों की देखभाल</span>
+          <span class="ayur-badge"><i class="fa-solid fa-person-walking" aria-hidden="true"></i> संपूर्ण विकास</span>
         </div>
 
       </div>
@@ -3189,9 +3392,9 @@
     <section class="offer-section">
       <div class="offer-card">
         <div class="offer-sticker">LIMITED<br><span>STOCK</span></div>
-        <p class="offer-kicker">Special introductory offer</p>
+        <p class="offer-kicker">Special offer</p>
         <h2 class="offer-title">आज का Limited Price</h2>
-        <p class="offer-copy">Neuro Mantra Syrup के लिए सीमित समय और सीमित stock उपलब्ध है।</p>
+        <p class="offer-copy">Neuro Mantra Syrup के लिए सीमित समय और सीमित stock Available है।</p>
         <div class="offer-timer" aria-label="Offer countdown">
           <div class="offer-time"><span id="offer-hours">06</span><small>Hours</small></div>
           <div class="offer-time"><span id="offer-minutes">00</span><small>Minutes</small></div>
@@ -3214,17 +3417,17 @@
 
     <div id="adyopsFormTarget" class="adyops-scroll-target" aria-hidden="true"></div>
 
-    <!-- AdyOps Form: Neuro Mantra Syrup -->
+    <!-- AdyOps Form: Dennis Anderson -->
     <section id="adyops-form-container" class="adyops-form-section" style="width:100%;max-width:760px;margin:0 auto;">
-      <div class="adyos-form" data-form="neuro-mantra-syrup"></div>
+      <div class="adyos-form" data-form="dennis-anderson"></div>
     </section>
-    <script src="https://app.adyops.com/embed.js" data-form="neuro-mantra-syrup" data-workspace="spherbal" async></script>
+    <script src="https://app.adyops.com/embed.js" data-form="dennis-anderson" data-workspace="spherbal" async></script>
     <!-- End AdyOps Form -->
 
     <!-- ADDED: Google Sheets fallback order form HTML. This stays hidden while the AdyOps embed works. -->
     <section id="google-sheet-fallback" class="adyops-form-section" hidden>
       <div class="gs-fallback-card">
-        <form id="google-sheet-order-form" action="https://script.google.com/macros/s/AKfycbyMRaEou4AeQzDkZxuRyGWzHf0kp7aTchDeNUaiooVbcmZJIP0CvSBwu8tf-Olp1PviLA/exec" method="POST" target="google-sheet-response-frame">
+        <form id="google-sheet-order-form" action="https://script.google.com/macros/s/AKfycbwBx3vC3sDqLewZJOzfF48-Ie7bwkwmGL4mVdm76fIOWSOhG0BWUZ8bOBPSaexNIRqKFw/exec" method="POST" target="google-sheet-response-frame">
           <label for="gs-customer-name">आपका नाम</label>
           <input id="gs-customer-name" name="customer_name" type="text" pattern="[A-Za-z ]+" oninput="this.value=this.value.replace(/[^A-Za-z ]/g,'')" placeholder="अपना नाम लिखें" required>
           <label for="gs-customer-phone">मोबाइल नंबर</label>
@@ -3653,7 +3856,7 @@
         }, 1000);
 
         var adyopsScript = document.querySelector(
-          'script[src*="app.adyops.com/embed.js"][data-form="neuro-mantra-syrup"]'
+          'script[src*="app.adyops.com/embed.js"][data-form="dennis-anderson"]'
         );
         if (adyopsScript) {
           adyopsScript.addEventListener('error', showFallback, { once: true });
